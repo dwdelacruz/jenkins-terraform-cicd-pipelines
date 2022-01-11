@@ -9,11 +9,6 @@ pipeline {
         cleanWs()
       }
     }
-    stage('checkout') {
-      steps {
-        checkout scm
-      }
-    }
     stage('terraform init') { 
         steps { 
             sh 'sudo ./terraformw init'
